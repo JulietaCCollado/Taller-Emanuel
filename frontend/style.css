@@ -1,0 +1,240 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin: 48;
+    background-color: #f1f1f1;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    position: relative;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.navbar a.button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    cursor: pointer;
+    border-radius: 15px;
+}
+.navbar a.button:hover{
+    background-color: #4CAF50;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: small;
+    color: gray;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+img {
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    margin-top: 20px;
+    max-width: calc(100% - 250px); /* Makes sure the image doesn't exceed its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 10px; /* Adds rounded corners to the image */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+}
+.text-under-image {
+    text-align: center; /* Center the text */
+    margin: 10px auto; /* Center the text horizontally and add margin */
+    max-width: 100%; /* Ensure the text doesn't exceed its container */
+}
+.reviews-title {
+    font-size: large; /* Adjust the font size as needed */
+    color: #333; /* Adjust the color as needed */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px; /* Add padding for spacing */
+    margin-top: 100px;
+   
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 10px;
+}
+
+.star-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.star {
+    width: 1rem; /* Adjust the width to make the star smaller */
+    height: 1rem; /* Adjust the height to make the star smaller */
+    fill: gold; /* Make the star yellow */
+}
+
+.rating {
+    margin-left: 0.5rem; /* Adjust the margin to create space between the star and rating */
+    font-size: 1rem; /* Adjust the font size of the rating */
+    font-weight: bold; /* Make the rating bold */
+    color: #333; /* Set the color of the rating */
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-top: 80px;
+    margin-left: 50px;
+   
+    
+}
+
+.card {
+    width: 30%; /* Adjust the width as needed */
+    margin: 40px; /* Increase or decrease this value to adjust spacing */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.star-container {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    width: 1rem; /* Adjust the width to make the star smaller */
+    height: 1rem; /* Adjust the height to make the star smaller */
+    fill: gold; /* Make the star yellow */
+    margin-right: 0.2rem; /* Adjust the margin between stars */
+}
+
+.rating {
+    font-size: 1rem; /* Adjust the font size of the rating */
+    font-weight: bold; /* Make the rating bold */
+    color: #333; /* Set the color of the rating */
+}
+.acerca-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#acerca h2 {
+    margin-top: 0;
+}
+
+/* Add a border around the text */
+.acerca-text {
+    flex: 2;
+    padding: 40px; /* Padding inside the border */
+    margin-right: 20px;
+    font-size: 22px;
+}
+.acerca-text p {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin: 20px;
+}
+
+.acerca-image {
+    flex: 3; /* Let the image take less space */
+}
+
+.acerca-image img {
+    max-width: 70%;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    border: 3px solid #a7f0a9; /* Adds a 3-pixel solid border */
+    border-radius: 15px;
+}
+.contact-form {
+    margin-top: 20px; /* Adjust the top margin */
+}
+.container h2 {
+    font-size: 40px; /* Adjust the font size as needed */
+    margin-bottom: 5px; /* Adjust the margin between title and paragraph */
+}
+
+.container p {
+    margin-bottom: 20px; /* Adjust the margin between paragraphs */
+}
+
+.semi-bold {
+    font-weight: 600; /* Semi-bold font weight */
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    font-size: medium;
+    color: #333;
+    margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-top: 2px solid #4CAF50; /* Adds a top border */
+    padding: 20px; /* Adds padding inside the footer */
+}
+.linkedin-link {
+    text-decoration: none; /* Remove underline */
+    color: #FF00FF; /* Set link color to blue */
+
+}

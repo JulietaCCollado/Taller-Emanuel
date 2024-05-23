@@ -1,0 +1,45 @@
+# cloudfront.yaml
+Resources:
+  MyCloudFrontDistribution:
+    Type: 'AWS::CloudFront::Distribution'
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Origins:
+          - Id: 'S3Origin'
+            DomainName: !GetAtt S3Bucket.DomainName
+            S3OriginConfig: {}
+        DefaultCacheBehavior:
+          TargetOriginId: 'S3Origin'
+          ViewerProtocolPolicy: 'redirect-to-https'
+          AllowedMethods: 
+            - GET
+            - HEAD
+            - OPTIONS
+          CachedMethods:
+            - GET
+            - HEAD
+          LambdaFunctionAssociations:
+            - EventType: 'viewer-request'
+              LambdaFunctionARN: !Ref MyLambdaFunction
+        DefaultRootObject: 'index.html'
+        ViewerCertificate:
+          CloudFrontDefaultCertificate: true
+
+  MyLambdaFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: 'MyLambdaFunction'
+      Handler: 'lambda_function.lambda_handler'
+      Role: arn:aws:iam::123456789012:role/MyLambdaExecutionRole
+      Code:
+        ZipFile: |
+          import json
+
+          def lambda_handler(event, context):
+              # Example processing
+              return {
+                  'statusCode': 200,
+                  'body': json.dumps('Hello from Lambda!')
+              }
+      Runtime: 'python3.8'
